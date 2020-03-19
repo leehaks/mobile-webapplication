@@ -1,0 +1,15 @@
+<!-- 마이페이지 슬라이드 리스트 -->
+
+<div id="modalSlideMyPageList" class="mymenu-list-box w-full h-full absolute flex col hidden">
+    <button class="btn sm primary radius ml-auto" onclick="stepCustom('','myMngList')">로그아웃</button>
+    <div class="mymenu-list">
+        <button onclick="stepCustom('','myMngList')"></button>
+        <ul>
+            <li><a href="./userPage.html">회원정보 관리</a></li>
+            <li><a>간편결제 관리</a></li>
+            <li><a onclick="stepCustom('business-1','myMngList')">사업자 인증</a></li>
+            <li><a onclick="stepCustom('business-2','myMngList')">사업자 등록</a></li>
+            <li><a href="./alarm.html">알림 등록</a></li>
+        </ul>
+    </div>
+</div>

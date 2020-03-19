@@ -1,0 +1,98 @@
+<!-- 서비스추가 -->
+
+<div id="modalProductItemAdd" class="w-full h-full absolute bg-white flex col hidden">
+    <div class="header">
+        <div style="width:21px"></div>
+        <h6>서비스추가</h6>
+        <div><button onclick="stepCustom('', 'servicePlus')" class="btn btn-link"><img width="15px" src="../img/icon/close.svg" /></button></div>
+    </div>
+    
+    <div class="main flex-1">
+        
+        <div class="custom-service-title">
+            <h5>요동네에 서비스를<br/>
+            추가해주세요!</h5>
+            <p><small>많은 서비스를 제공하시면 더많은 유저와 접촉할 수 있습니다.</small></p>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">
+                <h6>서비스가능장소</h6>
+            </div>
+            <div class="card-content">
+                <form class="flex items-center service-items">
+                    <input id="indoor" type="radio" name="service-place" checked>
+                    <label for="indoor">실내</label>
+                    <input id="outdoor" type="radio" name="service-place">
+                    <label for="outdoor">실외</label>
+                </form>
+            </div>
+
+            <div class="card-title">
+                <h6>서비스가능장소</h6>
+            </div>
+            <div class="card-content">
+                <form class="flex flex-wrap items-center service-items">
+                    <input id="oneProduct" type="checkbox" name="service-product" checked>
+                    <label for="oneProduct">조명</label>
+                    <input id="twoProduct" type="checkbox" name="service-product">
+                    <label for="twoProduct">도배</label>
+                    <input id="threeProduct" type="checkbox" name="service-product">
+                    <label for="threeProduct">장판/마루</label>
+                    <input id="fourProduct" type="checkbox" name="service-product">
+                    <label for="fourProduct">수도</label>
+                    <input id="fiveProduct" type="checkbox" name="service-product">
+                    <label for="fiveProduct">타일</label>
+                    <input id="sixProduct" type="checkbox" name="service-product">
+                    <label for="sixProduct">붙박이장</label>
+                    <input id="sevenProduct" type="checkbox" name="service-product">
+                    <label for="sevenProduct">신발장</label>
+                    <input id="eightProduct" type="checkbox" name="service-product">
+                    <label for="eightProduct">보일러</label>
+                    <input id="nineProduct" type="checkbox" name="service-product">
+                    <label for="nineProduct">싱크대</label>
+                    <input id="tenProduct" type="checkbox" name="service-product">
+                    <label for="tenProduct">세면대</label>
+                    <input id="elevenProduct" type="checkbox" name="service-product">
+                    <label for="elevenProduct">샤워기</label>
+                    <input id="twelProduct" type="checkbox" name="service-product">
+                    <label for="twelProduct">콘셉트</label>
+                </form>
+            </div>
+
+            <form class="join-component border-t mt-10">   
+                            
+                <div>
+                    <label>제목</label>
+                    <input type="text">
+                </div>
+            
+                <div>
+                    <label>설명</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>비용</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>이미지</label>
+                    <input class="ml-auto" type="text" >
+                    <a href="" class="text-primary"><small>업로드</small></a>
+                </div>
+                <div>
+                    <label>서비스노출</label>
+                    <div class="chk-box ml-auto">
+                        <input id="serviceView" type="checkbox" class="ml-auto">
+                        <label class="m-0" for="serviceView"></label>
+                    </div>
+                </div>
+                
+
+            </form>
+        </div>
+        <div class="join-group mt-20">
+            <a onclick="stepCustom('', 'servicePlus')" class="btn-block btn-border primary btn radius">저장</a>
+        </div>
+    </div>
+</div>

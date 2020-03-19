@@ -1,0 +1,85 @@
+<!-- 제품상세정보 -->
+
+<div id="modalProductItemDetail" class="w-full h-full absolute bg-white flex col hidden">
+    <div class="header">
+        <div style="min-width:21px"></div>
+        <h6>제품상세정보</h6>
+        <div><button onclick="stepCustom('','productItemDetail')" class="btn btn-link"><img width="15px" src="../img/icon/close.svg" /></button></div>
+    </div>
+    
+    <div class="main flex-1">
+        
+        <div class="custom-service-title">
+            <h5>선택하신 제품에 대한<br/>
+            옵션선택값을 정해주세요!</h5>
+            <p><small>옵션 선택이 없으면 기본가격만 결제됩니다.</small></p>
+        </div>
+        
+        <div class="card">
+            <div class="card-content">
+                <p class="text-sm p-10 mb-10">
+                    욕실 최대 할인 & 세면기, 양변기 업그레이드. 욕실리모델링 구매 시, 백화점 상품권 증정! 회원가입 10%, 7% 할인쿠폰. 2개 이상 복수구매 할인. 신규회원 최대2만원 적립금. 유형: 욕실리모델링, 양변기,비데, 세면기.
+                </p>
+
+                <div class="mb-20 overflow-hidden">
+                    <img src="../img/bathroom-product-1.jpg" />
+                </div>
+
+                <div class="table-component pb-15">
+                    <table class="service-list-table">
+                        <tbody>
+                            <tr>
+                                <td class="service-title" rowspan="2">변기</td>
+                                <td class="service-basic">
+                                    <ul>
+                                        <li>기본가격
+                                            <div class="chk-box">
+                                                <input id="productTitle" type="checkbox" />
+                                                <label for="productTitle">700,000</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>원피스 양변기
+                                            <div class="chk-box chk-inline">
+                                                <input id="product1" type="checkbox" />
+                                                <label for="product1">30,000</label>
+                                            </div>
+                                        </li>
+                                        <li>투피스 양변기
+                                            <div class="chk-box chk-inline">
+                                                <input id="product2" type="checkbox" />
+                                                <label for="product2">30,000</label>
+                                            </div>
+                                        </li>
+                                        <li>비대일체형 양변기
+                                            <div class="chk-box chk-inline">
+                                                <input id="product3" type="checkbox" />
+                                                <label for="product3">30,000</label>
+                                            </div>
+                                        </li>
+                                        <li>벽배수형 양변기
+                                            <div class="chk-box chk-inline">
+                                                <input id="product4" type="checkbox" />
+                                                <label for="product4">30,000</label>
+                                            </div>
+                                        </li>
+                                        <li class="ps">* 설치되는 브랜드에 따라 비용이 추가될 수 있습니다.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                       
+            </div>
+            <div class="join-group pb-15">
+                <a onclick="stepCustom('costAlarm','')" class="btn-block btn-border primary btn radius">결제하기</a>
+            </div>
+        </div>
+    </div>
+
+</div>

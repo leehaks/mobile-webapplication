@@ -1,0 +1,318 @@
+
+/* 
+    - button component
+    1. .btn-group : button 여러개 넣을 경우 부모요소
+    2. .btn-block, .btn-icon, btn-link, btn-border 
+    3. .btn-close, .btn-close.arrow  
+    4. .btn-sm, btn-xs 
+    5. .ripple : button 클릭효과추가 
+*/
+
+.btn-group { 
+    display: flex; 
+    display: -ms-flexbox; 
+    align-items: center; 
+    -ms-flex-align: center; 
+}
+
+.btn-group .btn { margin-left: .5rem; }
+
+.btn-group.col .btn { 
+    margin-left: 0; 
+    margin-top: .5rem; 
+}
+
+.btn-group .btn:first-of-type { margin-left: 0; }
+.btn-group.col .btn:first-of-type { margin-top: 0; }
+
+/* ============================================================ */
+
+.btn { 
+    background: transparent; 
+    min-height: 2rem;
+    max-width: 10rem; 
+    display: inline-block;  
+    padding: 0 .5em; 
+    border: none; 
+    border: 1px solid transparent; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    vertical-align: middle; 
+    font-size: .75rem; 
+    color: currentColor; 
+    cursor: pointer;
+}
+
+.btn.block { 
+    width: 100%; 
+    max-width: 100%; 
+    display: block; 
+}
+
+.btn-icon { 
+    width: 2.25rem; 
+    min-width: 0; 
+    padding: 0; 
+    font-size: 1rem; 
+}
+
+.btn-link { 
+    min-width: 0;
+    width: auto;
+    height: auto; 
+    line-height: 1.25rem; 
+    padding: 0; 
+    border-radius: 0;
+    border-color: transparent !important; 
+}
+
+.btn-list { 
+    width: 100%; 
+    min-width: 0;
+    min-height: 35px; 
+    padding: 5px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-list img, 
+.btn-arrow img { 
+    width: 23px; 
+    margin-bottom: 0; 
+}
+
+
+/* ============================================================ */
+
+
+.btn.sm, 
+.btn-group.sm .btn { 
+    min-width: 0; 
+    height: auto; 
+    line-height: initial;
+    padding: .15em .65em;
+    font-size: .7rem; 
+}
+
+.btn.lg, 
+.btn-group.lg .btn { 
+    min-width: 7rem; 
+    width: auto; 
+    max-width: 10rem; 
+    height: 2.85rem; 
+    line-height: 2.75rem; 
+    font-size: 1.25rem; 
+}
+
+/* ============================================================ */
+
+.btn.primary { 
+    background: #FF661A !important; 
+    border-color:  #FF661A !important; 
+    color: #fff; 
+}
+
+.btn-border.primary, 
+.btn-link.primary { 
+    background: transparent;
+    color:#FF661A; }
+
+.btn-border.warning, 
+.btn-link.warning { 
+    background: transparent;
+    color:#f1b437; }
+
+.btn-border.danger, 
+.btn-link.danger { 
+    background: transparent;
+    color:#ee352e; }
+
+.btn-border.success, 
+.btn-link.success { 
+    background: transparent;
+    color:#5cc19f; }
+
+
+/* ============================================================ */
+
+/* form */
+
+form label { 
+    display: inline-block; 
+    min-width: 70px; 
+    margin-right: .5rem; 
+    font-size: .725rem; 
+    font-weight: 700;  
+    color: #454d5b; 
+}
+
+.sch-box, 
+.chk-box, 
+.rdo-box { 
+    display: flex; 
+    display: -ms-flexbox; 
+    align-items: center; 
+    -ms-flex-align: center; 
+}
+
+.sch-box { position: relative; }
+
+.sch-box input[type="text"] { 
+    padding-left: 1em; 
+    padding-right: 2.75em; 
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    flex: 1; 
+    -ms-flex: 1 1 0; 
+}
+
+.sch-box input[type="submit"] { 
+    background: url(../img/icon/search.svg) center center no-repeat; 
+    background-size: 60%; 
+    width: 25px; 
+    min-width: 25px; 
+    position: absolute; 
+    top: 0; 
+    right: 10px; 
+    bottom: 0; 
+    margin: auto; 
+}
+
+.sel-box select { 
+    background: url('../img/icon/arrow-down.svg') calc(100% - 10px) center no-repeat; 
+    background-size: 12px; 
+    padding-left: 1em; 
+    padding-right: 2.75em; 
+}
+
+
+/* table */
+
+.table-component { 
+    width: 100%; 
+    height: 100%; 
+}
+
+.table-component table { 
+    width: 100%; 
+}
+
+table th, table td { 
+    /* height: 32px;  */
+    /* line-height: 32px;     */
+    vertical-align: middle;
+    color: #3f4655; 
+}
+
+table th { 
+    border-bottom: 1px solid #d8d8d8; 
+    font-size: .8rem;     
+    font-weight: 700;
+    /* font-family: 'NanumSquare_acEB', san-serif; */
+    color: #9fa2aa; 
+}
+
+table td { font-size: .825rem; }
+
+.container.header .table-component { 
+    max-height: 132px; 
+    border-top: 1px solid #d8d8d8; 
+    border-bottom-width: 2px;
+    overflow: auto;
+}
+
+/* table */
+
+.tab-component { 
+    position: relative;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-component .tab-label-group ul { 
+    display: flex; 
+    display: -ms-flexbox;
+    border-bottom: 1px solid #eee; 
+}
+
+.tab-component .tab-label-group ul li a.tab-label { 
+    display: flex; 
+    display: -ms-flexbox;
+    align-items: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    width: 80px; 
+    margin-left: 1.5rem; 
+    padding: 1.25em 0; 
+    font-size: .75rem; 
+    font-weight: 700; 
+}
+
+.tab-component .tab-label-group ul li a.tab-label:first-child { margin-left: 0; }
+
+.tab-component div.bar { 
+    background: #FF661A; 
+    width: 80px; 
+    height: 2px; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    transition: left .5s ease-in-out;
+}
+
+
+
+.tab-component .tab-panel { 
+    display: none; 
+    padding-left: 2px; 
+    position: relative;
+    flex: 1; 
+    overflow: auto; 
+    
+}
+
+.tab-component .tab-panel.active { display: block; }
+
+.tab-component.circle-label .tab-label-group { padding: .75em 1em; }
+.tab-component.circle-label .tab-label-group ul { border-bottom: 0;  }
+
+.tab-component.circle-label ul li a.tab-label { 
+    width: auto; 
+    height: 25px; 
+    margin-right: .75rem; 
+    padding: 0 1em; 
+    border-radius: 1rem;
+}
+
+.tab-component.circle-label a.tab-label.active { 
+    background: #FF661A; 
+    color: #fff; 
+}
+
+.tab-component.circle-label div.bar { display: none; }
+
+/* slider */
+
+.slider-component ul { 
+    display: flex; 
+    display: -ms-flexbox; 
+}
+
+.slider-component ul li { 
+    display: none; 
+    background: #eee; 
+    width: 100%; 
+    height: 15vh; 
+    color: #fff; 
+    align-items: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+}
+
+.slider-component ul li:first-child { display: flex; }

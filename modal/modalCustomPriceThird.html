@@ -1,0 +1,67 @@
+<!-- 맞춤견적 3단계 -->
+
+<div id="modalCustomPriceThird" class="w-full h-full absolute bg-white flex col hidden">
+    <div class="header">
+        <div><button onclick="stepCustom('customPrice2','customPrice3')" class="btn btn-link"><img width="19px" src="./img/icon/arrow-right.svg" /></button></div>
+        <h6>맞춤견적</h6>
+        <div><button onclick="stepCustom('','customPrice3')" class="btn btn-link"><img width="15px" src="./img/icon/close.svg" /></button></div>
+    </div>
+    <div class="main flex-1">
+        
+        <div class="custom-service-title">
+            <h5>요동네의 해결사에게<br/>
+            문의해주세요!</h5>
+            <p><small>상세한 내용을 작성하시면 정확한 견적을 받을수 있습니다.</small></p>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">
+                <h6>서비스일정선택</h6>
+            </div>
+            <div class="card-content">
+                <div class="service-items flex col">
+                    <select class="flex-1">
+                        <option>2020-03-19</option>
+                        <option>2020-03-19</option>
+                        <option>2020-03-18</option>
+                        <option>2020-03-17</option>
+                        <option>2020-03-16</option>
+                        <option>2020-03-15</option>
+                        <option>2020-03-14</option>
+                        <option>2020-03-13</option>
+                        <option>2020-03-12</option>
+                        <option>2020-03-11</option>
+                        <option>2020-03-10</option>
+                    </select>
+                    <div class="flex">
+                        <select class="flex-1 mr-5">
+                            <option>08:00</option>
+                            <option>08:30</option>
+                            <option>09:00</option>
+                            <option>09:30</option>
+                            <option>10:00</option>
+                            <option>10:30</option>
+                            <option>11:00</option>
+                            <option>11:30</option>
+                            <option>12:00</option>                                    
+                        </select>
+                        <select class="flex-1 ml-5">
+                            <option>08:30</option>
+                            <option>09:00</option>
+                            <option>09:30</option>
+                            <option>10:00</option>
+                            <option>10:30</option>
+                            <option>11:00</option>
+                            <option>11:30</option>
+                            <option>12:00</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="join-group pb-20">
+        <a onclick="stepCustom('','customPrice3')" class="btn-block btn-border primary btn radius">완료</a>
+    </div>
+</div>

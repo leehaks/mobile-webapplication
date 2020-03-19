@@ -1,0 +1,86 @@
+
+<!-- 회원가입 1단계 -->
+
+<div id="modalJoinCerityFirst" class="w-full h-full absolute bg-white flex col hidden">
+    <div class="header">
+        <div><button onclick="stepCustom('','customStep1')" class="btn btn-link"><img width="19px" src="../img/icon/arrow-right.svg" /></button></div>
+        <h6>회원가입</h6>
+        <div><button onclick="stepCustom('','customStep1')" class="btn btn-link"><img width="15px" src="../img/icon/close.svg" /></button></div>
+    </div>
+    <div class="main flex-1">
+        <div class="custom-service-title m-0">
+            <h5>요동네의 회원가입을 위한<br/>
+            본인인증이 필요합니다.</h5>
+            <p><small>인증이 잘되지 않을 경우 고객 센터로 문의 바랍니다.</small></p>
+        </div>
+        
+        <div class="card">
+            <form class="join-component">
+                <div>
+                    <label>이름</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>생년월일</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label></label>
+                    <select class="ml-auto">
+                        <option>성별</option>
+                        <option>남성</option>
+                        <option>여성</option>
+                    </select>
+                    <select class="ml-20">
+                        <option>국적</option>
+                        <option>국내</option>
+                        <option>국외</option>
+                    </select>
+                </div>
+                <div>
+                    <label>전화</label>
+                    <select class="mr-5"><option>SK</option></select>
+                    <select class="mr-10"><option>010</option></select>
+                    <input type="text" placeholder="휴대전화 뒤 7-8자리" class="ml-auto sm" />
+                </div>
+            </form>
+
+            <div class="contact-assign">
+                <div class="flex mb-5 mt-5">
+                    <h6>휴대전화 인증 약관</h6>
+                </div>
+
+                <div class="chk-box flex items-center">
+                    <input id="termsAll" type="checkbox" />
+                    <label for="termsAll"><strong>모든 약관에 동의합니다.</strong></label>
+                </div>
+                <div class="chk-box flex items-center">
+                    <input id="termsPhone" type="checkbox" />
+                    <label for="termsPhone">휴대전화 인증 서비스이용약관(필수)</label>
+                    <a class="ml-auto" href="">전문보기</a>
+                </div>
+                <div class="chk-box flex items-center">
+                    <input id="termsInfo" type="checkbox" />
+                    <label for="termsInfo">고유식별정보 처리 동의(필수)</label>
+                    <a class="ml-auto" href="">전문보기</a>
+                </div>
+                <div class="chk-box flex items-center">
+                    <input id="termsTelecom" type="checkbox" />
+                    <label for="termsTelecom">통신사 이용약관 동의(필수)</label>
+                    <a class="ml-auto" href="">전문보기</a>
+                </div>
+                <div class="chk-box flex items-center">
+                    <input id="termsPrivacy" type="checkbox" />
+                    <label for="termsPrivacy">개인정보 수집/이용동의(필수)</label>
+                    <a class="ml-auto" href="">전문보기</a>
+                </div>
+            </div>
+
+            <div class="certify-group">
+                <button class="primary btn btn-border btn-block">인증 번호 요청</button>
+                <input type="text" placeholder="인증 번호를 입력하세요." />
+                <a onclick="stepCustom('customStep2', 'customStep1')" class="mt-10">확인</a>
+            </div>
+        </div>
+    </div>
+</div>

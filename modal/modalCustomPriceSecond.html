@@ -1,0 +1,77 @@
+<!-- 맞춤견적 2단게 -->
+
+<div id="modalCustomPriceSecond" class="w-full h-full absolute bg-white flex col hidden">
+    <div class="header">
+        <div><button onclick="stepCustom('customPrice1', 'customPrice2')" class="btn btn-link"><img width="19px" src="./img/icon/arrow-right.svg" /></button></div>
+        <h6>맞춤견적</h6>
+        <div><button onclick="stepCustom('', 'customPrice2')" class="btn btn-link"><img width="15px" src="./img/icon/close.svg" /></button></div>
+    </div>
+    
+    <div class="main flex-1">
+        
+        <div class="custom-service-title">
+            <h5>요동네의 해결사에게<br/>
+            문의해주세요!</h5>
+            <p><small>상세한 내용을 작성하시면 정확한 견적을 받을수 있습니다.</small></p>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">
+                <h6>서비스가능장소</h6>
+            </div>
+            <div class="card-content">
+                <form class="flex items-center service-items">
+                    <input id="indoor" type="radio" name="service-place" checked>
+                    <label for="indoor">실내</label>
+                    <input id="outdoor" type="radio" name="service-place">
+                    <label for="outdoor">실외</label>
+                </form>
+            </div>
+
+            <div class="card-title">
+                <h6>서비스가능장소</h6>
+            </div>
+            
+            <div class="card-content">
+                <form class="flex flex-wrap items-center service-items">
+                    <input id="oneProduct" type="checkbox" name="service-product" checked>
+                    <label for="oneProduct">조명</label>
+                    <input id="twoProduct" type="checkbox" name="service-product">
+                    <label for="twoProduct">도배</label>
+                    <input id="threeProduct" type="checkbox" name="service-product">
+                    <label for="threeProduct">장판/마루</label>
+                    <input id="fourProduct" type="checkbox" name="service-product">
+                    <label for="fourProduct">수도</label>
+                    <input id="fiveProduct" type="checkbox" name="service-product">
+                    <label for="fiveProduct">타일</label>
+                    <input id="sixProduct" type="checkbox" name="service-product">
+                    <label for="sixProduct">붙박이장</label>
+                    <input id="sevenProduct" type="checkbox" name="service-product">
+                    <label for="sevenProduct">신발장</label>
+                    <input id="eightProduct" type="checkbox" name="service-product">
+                    <label for="eightProduct">보일러</label>
+                    <input id="nineProduct" type="checkbox" name="service-product">
+                    <label for="nineProduct">싱크대</label>
+                    <input id="tenProduct" type="checkbox" name="service-product">
+                    <label for="tenProduct">세면대</label>
+                    <input id="elevenProduct" type="checkbox" name="service-product">
+                    <label for="elevenProduct">샤워기</label>
+                    <input id="twelProduct" type="checkbox" name="service-product">
+                    <label for="twelProduct">콘셉트</label>
+                </form>
+            </div>
+
+            <div class="card-title">
+                <h6>상세설명</h6>
+            </div>
+            <div class="card-content">
+                <form class="flex items-center service-items">
+                    <textarea placeholder="내 문제에 대해 상세한 내용을 적어주세요!"></textarea>
+                </form>
+            </div>
+        </div>
+        <div class="join-group mt-20">
+            <a onclick="stepCustom('customPrice3', 'customPrice2')" class="btn-block btn-border primary btn radius">다음</a>
+        </div>
+    </div>
+</div>

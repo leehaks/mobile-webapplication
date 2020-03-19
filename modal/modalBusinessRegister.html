@@ -1,0 +1,79 @@
+<!-- 사업자등록 -->
+
+<div id="modalBusinessRegister" class="w-full h-full absolute bg-white flex col hidden">
+    <div class="header">
+        <div></div>
+        <h6>사업자 등록</h6>
+        <div><button onclick="stepCustom('','business-2')" class="btn btn-link"><img width="15px" src="../img/icon/close.svg" /></button></div>
+    </div>
+    
+    <div class="main flex-1">
+        
+        <div class="custom-service-title m-0">
+            <h5>사업자 등록을 위해<br/>
+            아래양식을 작성해 주세요.</h5>
+            <p><small>인증이 잘되지 않을 경우 고객 센터로 문의 바랍니다.</small></p>
+        </div>
+        
+        <div class="card pt-5">
+
+            <div class="card-title">
+                <h6>제공가능서비스</h6>
+            </div>
+            <div class="card-content">
+                <form class="flex flex-wrap items-center service-items">
+                    <input id="oneProduct" type="checkbox" name="service-product" checked>
+                    <label for="oneProduct">조명</label>
+                    <input id="twoProduct" type="checkbox" name="service-product">
+                    <label for="twoProduct">도배</label>
+                    <input id="threeProduct" type="checkbox" name="service-product">
+                    <label for="threeProduct">장판/마루</label>
+                    <input id="fourProduct" type="checkbox" name="service-product">
+                    <label for="fourProduct">수도</label>
+                    <input id="fiveProduct" type="checkbox" name="service-product">
+                    <label for="fiveProduct">타일</label>
+                    <input id="sixProduct" type="checkbox" name="service-product">
+                    <label for="sixProduct">붙박이장</label>
+                    <input id="sevenProduct" type="checkbox" name="service-product">
+                    <label for="sevenProduct">신발장</label>
+                    <input id="eightProduct" type="checkbox" name="service-product">
+                    <label for="eightProduct">보일러</label>
+                    <input id="nineProduct" type="checkbox" name="service-product">
+                    <label for="nineProduct">싱크대</label>
+                    <input id="tenProduct" type="checkbox" name="service-product">
+                    <label for="tenProduct">세면대</label>
+                    <input id="elevenProduct" type="checkbox" name="service-product">
+                    <label for="elevenProduct">샤워기</label>
+                    <input id="twelProduct" type="checkbox" name="service-product">
+                    <label for="twelProduct">콘셉트</label>
+                </form>
+            </div>
+
+            <form class="join-component border-t mt-5">                        
+                <div>
+                    <label>서비스가능지역</label>
+                    <a href="" class="ml-auto text-primary"><small>찾기</small></a>
+                </div>
+            </form>
+
+            <div class="p-10 boundary-range">
+                <div class="flex items-start">
+                    <h6 class="text-700">
+                        내위치 근처 동네<br/>
+                        <span class="text-400 text-xs">선택한 동네의 유저들에게 업체를 소개할 수 있습니다.</span>
+                    </h6>
+                    <p class="text-primary ml-auto"><span>30</span> 개</p>
+                </div>
+                <div class="w-full mt-10">
+                    <input class="w-full" type="range" min="0" max="100" step="20" >
+                </div>
+            </div>
+        </div>
+        
+        <div class="join-group mt-20">
+            <a onclick="stepCustom('', 'business-2')" href="userPage.html" class="radius-4 btn-block btn-border primary btn">사업자 등록</a>
+        </div>
+    </div>
+</div>
+
+    

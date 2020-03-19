@@ -1,0 +1,41 @@
+
+<!-- 비밀번호찾기 2단계 -->
+
+<div id="modalFindPwSecond" class="w-full h-full absolute bg-white flex col hidden">
+    <div class="header">
+        <div><button onclick="stepCustom('customStep3','customStep4')" class="btn btn-link"><img width="19px" src="../img/icon/arrow-right.svg" /></button></div>
+        <h6>비밀번호찾기</h6>
+        <div><button onclick="stepCustom('','customStep4')" class="btn btn-link"><img width="15px" src="../img/icon/close.svg" /></button></div>
+    </div>
+    <div class="slider-deps-component"></div>
+    <div class="main flex-1">
+        
+        <div class="custom-service-title m-0">
+            <h5>비밀번호 재설정을 위한<br/>
+            인증이 필요해요.</h5>
+            <p><small>입력이 안될 경우 고객 센터로 문의 바랍니다.</small></p>
+        </div>
+        
+        <div class="card">
+            <form class="join-component">
+                <div>
+                    <input id="emailSecret" type="radio" name="secretNum">
+                    <label onclick="stepCustom('','confirmBtn')" class="flex items-center" for="emailSecret">이메일로 인증</label>
+                    <input class="ml-auto sm" type="text" >
+                    <a onclick="stepCustom('confirmBtn','')" class="confirm-btn text-primary"><small>인증번호</small></a>
+                </div>
+                <div>
+                    <input id="phoneSecret" type="radio" name="secretNum">
+                    <label onclick="stepCustom('','confirmBtn')" class="flex items-center" for="phoneSecret">휴대폰으로 인증</label>
+                    <input class="sm ml-auto" type="text">
+                    <a onclick="stepCustom('confirmBtn','')" class="confirm-btn text-primary"><small>인증번호</small></a>
+                </div>
+                <div id="confirmBtn" class="secret-confirm flex items-center justify-between hidden">
+                    <input class="sm" type="text" placeholder="인증 번호를 입력하세요." />
+                    <span class="text-primary">05분00초</span>
+                    <a onclick="stepCustom('customStep5', 'customStep4')">확인</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

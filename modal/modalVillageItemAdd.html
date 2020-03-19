@@ -1,0 +1,51 @@
+<!-- 동네소식 정보입력 -->
+
+<div id="modalVillageItemAdd" class="w-full h-full absolute bg-white flex col hidden">
+    <div class="header">    
+        <div></div>
+        <h6>우리동네</h6>
+        <div><button onclick="stepCustom('','customStep3')" class="btn btn-link"><img width="15px" src="../img/icon/close.svg" /></button></div>
+    </div>
+    <div class="main flex-1">
+        <div class="custom-service-title m-0">
+            <h5>요동네의 소식지에<br/>
+            이벤트 소식을 올려주세요.</h5>
+            <p><small>상세한 내용을 작성하시면 더 많은 손님을 만날 수 있습니다.</small></p>
+        </div>
+        
+        <div class="card">
+            <form class="join-component">
+                <div>
+                    <label>제목</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>내용</label>
+                    <input type="text">
+                </div>
+                <div style="max-height: 100% !important">
+                    <div class="picture-component picture-village">
+                        <ul>
+                            <li><button class="picture-add"><img width="28px" src="../img/icon/camera-upload.svg"></button></li>
+                        </ul>
+                        </div>
+                </div>
+                <div>
+                    <label>주소</label>
+                    <input class="ml-auto" type="text" >
+                    <a href="" class="text-primary"><small>검색</small></a>
+                </div>
+                <div>
+                    <label>기간</label>
+                    <select class="ml-auto lg"><option>From</option></select>
+                    <select class="ml-20 lg"><option>To</option></select>
+                </div>
+
+            </form>
+
+            <div class="certify-group mt-20">
+                <button onclick="stepCustom('', 'customStep3')" class="primary btn btn-border btn-block">완료</button>
+            </div>
+        </div>
+    </div>
+</div>

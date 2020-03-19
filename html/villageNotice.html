@@ -1,0 +1,59 @@
+<!-- 동네소식페이지 -->
+
+<div class="map">
+    
+    <div class="map-btn-group">
+        <button id="markerUser" class="marker-btn"><span><img src="../img/icon/map-btn-user.svg"></span></button>
+        <button id="markerStore" class="marker-btn"><span><img src="../img/icon/map-btn-store.svg"></span></button>
+    </div>
+    <div class="village-plus-btn flex">
+        <button style="background: #FF661A; color: #fff;" class="primary" onclick="stepCustom('customStep3','')">+ 동네소식</button>
+        <button class="ml-5" onclick="stepCustom('customStep4','')">내소식</button>
+    </div>
+    <div class="list-view-btn">
+        <button onclick="stepCustom('customStep1','')">리스트 보기</button>
+    </div>
+
+    <div class="map-marker map-marker-user" style="top: 5rem">                    
+        <button data-mapname="markerStore" onclick="stepCustom('customStep6','')">
+            <span>1</span><img src="../img/icon/map-marker-user.svg"></buttoni>
+    </div>
+    <div class="map-marker map-marker-user" style="top: -5rem">
+        
+        <button data-mapname="markerStore" onclick="stepCustom('customStep6','')">
+            <span>2</span><img src="../img/icon/map-marker-user.svg"></buttoni>
+    </div>
+
+</div>
+
+<script>
+
+    let currentActive 
+
+    let markerHidden = function(){ 
+        document.querySelectorAll('button[data-mapname]')
+        .forEach(item => item.classList.remove('hidden'))
+    }
+
+    document.querySelectorAll('.marker-btn').forEach( elem => {
+        elem.addEventListener('click', function(e){
+            if(currentActive) currentActive.classList.remove('active'); 
+            currentActive == elem ? elem.classList.remove('active') : elem.classList.add('active');
+
+            if(elem.classList.contains('active')) {
+                let elemId = elem.getAttribute('id')
+                markerHidden(); 
+
+                document.querySelectorAll('button[data-mapname="'+elemId+'"').forEach(item => {
+                    item.classList.add('hidden'); 
+                })
+                currentActive = elem; 
+            }else { 
+                markerHidden(); 
+                currentActive = null; 
+            }
+
+        }); 
+    }) 
+
+</script>

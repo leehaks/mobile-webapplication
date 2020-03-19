@@ -1,0 +1,93 @@
+<!-- 사업자인증 -->
+
+<div id="modalBusinessCertify" class="w-full h-full absolute bg-white flex col hidden">
+    <div class="header">
+        <div></div>
+        <h6>사업자 인증</h6>
+        <div><button onclick="stepCustom('','business-1')" class="btn btn-link"><img width="15px" src="../img/icon/close.svg" /></button></div>
+    </div>
+    <div class="main flex-1">
+        <div class="custom-service-title m-0">
+            <h5>요동네의 사업자 등록을 위해서<br/>
+            인증이 필요해요!</h5>
+            <p><small>인증이 잘되지 않을 경우 고객 센터로 문의 바랍니다.</small></p>
+        </div>
+        
+        <div class="card">
+            <form class="join-component">   
+                
+                <div>
+                    <label>사업구분</label>
+                    <div class="flex ml-auto business-type">
+                        <input id="one" type="radio" name="business-type" class="hidden" checked>          
+                        <label class="rdo-label" for="one">사업자</label>
+                        <input id="two" type="radio" name="business-type" class="hidden">
+                        <label class="rdo-label" for="two">개인</label>
+                    </div>
+                </div>
+                <section data-input="one">
+                    <div>
+                        <label>사업자명</label>
+                        <input type="text">
+                        <a class="text-primary"><small>검색</small></a>
+                    </div>
+                    <div>
+                        <label>사업자번호</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>사업자등록증</label>
+                        <input class="ml-auto text-right" type="text" readonly >
+                        <a class="text-primary"><small>업로드</small></a>
+                    </div>
+                    <div>
+                        <label>출금계좌</label>
+                        <select class="mr-10"><option>은행</option></select>
+                        <input type="text" placeholder="계좌번호입력" class="ml-auto sm" />
+                    </div>
+                </section>
+                <section data-input="two" class="hidden">
+                    <div>
+                        <label>주민번호</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>사업자번호</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>주민등록증</label>
+                        <input class="ml-auto" type="text" >
+                        <a href="" class="text-primary"><small>업로드</small></a>
+                    </div>
+                    <div>
+                        <label>출금계좌</label>
+                        <select class="mr-10"><option>은행</option></select>
+                        <input type="text" placeholder="계좌번호입력" class="ml-auto sm" />
+                    </div>
+                </section>
+
+            </form>
+
+            <div class="contact-assign">
+                <div class="flex mb-5 mt-5">
+                    <h6>판매홍보약관</h6>
+                </div>
+
+                <div class="flex items-center">
+                    <label class="flex assign-text items-center">
+                        <input type="checkbox" />홍보목적으로 개인정보공유에 동의합니다.
+                    </label>
+                    <a class="ml-auto" href="">약관보기</a>
+                </div>
+                <div class="flex items-center">
+                    <a class="ml-auto" href="">서명하기</a>
+                </div>
+            </div>
+            
+            <div class="certify-group">
+                <button onclick="stepCustom('','business-1')"  class="primary btn btn-border btn-block">사업자 인증 완료</button>
+            </div>
+        </div>
+    </div>
+</div>

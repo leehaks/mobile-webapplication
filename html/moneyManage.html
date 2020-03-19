@@ -1,0 +1,203 @@
+
+
+        <main class="flex-1">
+            <div>
+                <ul class="calendar-filter-btn flex items-center justify-center">
+                    <li><button>3개월</button></li>
+                    <li><button>6개월</button></li>
+                    <li><button>9개월</button></li>
+                    <li><button>12개월</button></li>
+                </ul>
+                <ul class="calendar-filter flex items-center justify-center">
+                    <li><input type="text" placeholder="2020.03.22" /></li>
+                    <li>-</li>
+                    <li><input type="text" placeholder="2020.03.22" /></li>
+                    <li><button class="btn primary sm radius-4 pl-10 pr-10">검색</button></li>
+                </ul>
+            </div>
+
+            <div class="chart-container mb-15">
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <div class="custom-service-group">
+                <a onclick="stepCustom('moneyDetail','')" class="custom-item">
+                    <div class="text-box w-full">
+                        <h5>2020.03.09</h5>
+                        <ul>
+                            <li><span>일반서비스</span>2건</li>
+                            <li><span>맞춤서비스</span>1건</li>
+                            <li>
+                                <div class="text-right">매출 : 399,000원</div></li>
+                        </ul>
+                    </div>
+                </a>
+                <a onclick="stepCustom('moneyDetail','')" class="custom-item">
+                    <div class="text-box w-full">
+                        <h5>2020.03.08</h5>
+                        <ul>
+                            <li><span>일반서비스</span>2건</li>
+                            <li><span>맞춤서비스</span>1건</li>
+                            <li>
+                                <div class="text-right">매출 : 399,000원</div></li>
+                        </ul>
+                    </div>
+                </a>
+                <a onclick="stepCustom('moneyDetail','')" class="custom-item">
+                    <div class="text-box w-full">
+                        <h5>2020.03.07</h5>
+                        <ul>
+                            <li><span>일반서비스</span>2건</li>
+                            <li><span>맞춤서비스</span>1건</li>
+                            <li>
+                                <div class="text-right">매출 : 399,000원</div></li>
+                        </ul>
+                    </div>
+                </a>
+            </div> 
+        </main>        
+
+        <!-- 매출상세표 -->
+
+        <div id="moneyDetail" class="w-full h-full absolute bg-white flex col hidden">
+            <div class="header border-b">
+                <div></div>
+                <h6>매출상세</h6>
+                <div><button onclick="stepCustom('','moneyDetail')" class="btn btn-link"><img width="15px" src="../img/icon/close.svg" /></button></div>
+            </div>
+           
+            <div class="main flex-1">
+                
+                <div class="card">                    
+                    <div class="card-content">
+                        <div class="custom-service-group">
+                            <a href="" class="custom-item">
+                                <div class="text-box w-full">
+                                    <h5>2020.03.09</h5>
+                                    <ul>
+                                        <li><span>일반서비스</span>2건</li>
+                                        <li><span>맞춤서비스</span>1건</li>
+                                        <li>
+                                            <div class="text-right">매출 : 399,000원</div></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div> 
+                        <div class="conduct-group">
+                            <a class="conduct-item">
+                                <div class="img-box">
+                                    <img src="../img/bathroom-2.jpg">
+                                </div>
+                                <div class="text-box">
+                                    <h6>업체지정견적</h6>
+                                    <ul>
+                                        <li class="flex items-center"><span class="m-0">결제가격</span>249,000</li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a class="conduct-item">
+                                <div class="img-box">
+                                    <img src="../img/bathroom-2.jpg">
+                                </div>
+                                <div class="text-box">
+                                    <h6>실내스팀세차</h6>
+                                    <ul>
+                                        <li class="flex items-center"><span class="m-0">결제가격</span>70,000</li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a class="conduct-item">
+                                <div class="img-box">
+                                    <img src="../img/bathroom-2.jpg">
+                                </div>
+                                <div class="text-box">
+                                    <h6>맞춤견적</h6>
+                                    <ul>
+                                        <li class="flex items-center"><span class="m-0">결제가격</span>80,000</li>
+                                    </ul>
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function stepCustom(step1, step2) {
+            console.log(step1, step2); 
+            if(step1) document.getElementById(step1).classList.remove('hidden');
+            if(step2) document.getElementById(step2).classList.add('hidden');
+        }
+
+        // Chart-component
+
+        let ctx = document.getElementById('myChart').getContext('2d');
+        
+        let config = {
+
+            type: 'line',
+            data: {
+                labels: [ // Date Objects
+                    '02월',
+                    '01월',
+                    '12월',
+                    '11월',
+                    '10월',
+                    '09월',
+                    '08월'
+                ],
+                datasets: [{
+                    label: '변기',
+                    backgroundColor: 'rgba(75, 192, 192, 1)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false,
+                    data: [
+                        Math.floor(Math.random() * 50),
+                        Math.floor(Math.random() * 50),
+                        Math.floor(Math.random() * 50),
+                        Math.floor(Math.random() * 50),
+                        Math.floor(Math.random() * 50),
+                        Math.floor(Math.random() * 50),
+                        Math.floor(Math.random() * 50)
+                    ],
+                }, {
+                    label: '욕조',
+                    backgroundColor: 'rgba(255, 99, 132, 1)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    fill: false,
+                    data: [
+                        Math.floor(Math.random() * 50),
+                        Math.floor(Math.random() * 50),
+                        Math.floor(Math.random() * 50),
+                        Math.floor(Math.random() * 50),
+                        Math.floor(Math.random() * 50),
+                        Math.floor(Math.random() * 50),
+                        Math.floor(Math.random() * 50)
+                    ],
+                }]
+            },
+
+            options: {
+                // default value. false일 경우 포함된 div의 크기에 맞춰서 그려짐.
+                maintainAspectRatio: false, 
+                title: {
+                    text: 'Chart.js Time Scale'
+                },
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: '매출관리'
+                        }
+                    }]
+                },
+            }
+        };
+        
+        let myChart = new Chart(ctx, config);
+    </script>
+</body>
+</html>

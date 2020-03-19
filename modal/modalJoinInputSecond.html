@@ -1,0 +1,61 @@
+
+<!-- 회원가입 2단계 -->
+
+<div id="modalJoinInputSecond" class="w-full h-full absolute bg-white flex col">
+    <div class="header">
+        <div><button onclick="stepCustom('','customStep2')" class="btn btn-link"><img width="19px" src="../img/icon/arrow-right.svg" /></button></div>
+        <h6>회원가입</h6>
+        <div><button onclick="stepCustom('','customStep2')" class="btn btn-link"><img width="15px" src="../img/icon/close.svg" /></button></div>
+    </div>
+    <div class="main flex-1">
+        
+        <div class="custom-service-title m-0">
+            <h5>회원가입을 위해<br/>
+            아래양식을 작성해 주세요.</h5>
+            <p><small>인증이 잘되지 않을 경우 고객 센터로 문의 바랍니다.</small></p>
+        </div>
+        
+        <div class="card">
+            <form class="join-component">
+                <div>
+                    <label>이메일</label>
+                    <input class="ml-auto" type="text">
+                </div>
+                <div>
+                    <label>비밀번호</label>
+                    <input class="ml-auto" type="text" placeholder="비밀번호 8자리이상, 대소문자 구별">
+                </div>
+                <div>
+                    <label>비밀번호확인</label>
+                    <input class="ml-auto" type="text" placeholder="">
+                </div>
+                <div>
+                    <label>주소</label>
+                    <input class="ml-auto" type="text" >
+                    <a href="" class="text-primary"><small>검색</small></a>
+                </div>
+                <div>
+                    <label>상세주소</label>
+                    <input class="ml-auto" type="text">
+                </div>
+            </form>
+            <div class="contact-assign">
+                <div class="flex mb-5">
+                    <h6>이용약관 동의</h6>
+                    <a href="" class="ml-auto">약관보기</a>
+                </div>
+                <div class="chk-box">
+                    <input type="checkbox" />
+                    <label class="flex">
+                        요동네에서 보내드리는 이벤트 및 푸시알림을 받아 보시겠습니까? 
+                        수신 동의하시면 이벤트 등 다양한 혜택과 정보를 받아보실 수 있습니다. 
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="join-group">
+            <a onclick="stepCustom('', 'customStep2')" href="userPage.html" class="btn-block btn-border primary btn radius-4">회원가입</a>
+        </div>
+    </div>
+</div>
