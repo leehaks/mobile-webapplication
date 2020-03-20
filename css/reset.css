@@ -18,6 +18,7 @@ time, mark, audio, video {
 	font: inherit;
 	font-family: 'NanumSquare', sans-serif; 
 	transform:skew(-0.001deg);
+	-webkit-font-smoothing: antialiased;
 }
 
 *, ::before, ::after { box-sizing: border-box; }
@@ -34,7 +35,6 @@ html, body {
 	overflow: hidden;
 	position: relative;
 	font-size: 16px; 
-	-webkit-font-smoothing: antialiased;
 	color: #465266; 
 }
 
@@ -58,10 +58,11 @@ select, input, button, textarea {
 	border: none; 
 	outline: 0;
 	box-shadow: none;
-	font-size: .725rem; 
+	font-size: .775rem; 
 	color: #465266; 
 	font-family: 'NanumSquare', sans-serif; 
 	cursor: pointer;
+	transform:skew(-0.001deg);
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
 }

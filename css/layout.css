@@ -1,7 +1,7 @@
 
 header, footer, 
 .header, .footer { 
-    height: 80px; 
+    height: 75px; 
     display: flex; 
     display: -ms-flexbox; 
     align-items: center;
@@ -84,9 +84,7 @@ footer a.active span::after {
     z-index: -1; 
 }
 
-
-
-
+/*  */
 
 .login-header { 
     display: flex;
@@ -404,29 +402,6 @@ a#closeBtn { color: #465266; }
     margin-left: .5rem; 
     font-size: .625em; 
 }
-
-/* crumb */
-
-.crumb-component { padding: .5em 1rem; }
-
-.crumb-component ul { 
-    display: flex; 
-    display: -ms-flexbox; 
-    align-items: center;
-    font-size: .525rem; 
-}
-
-.crumb-component ul li:nth-child(2n) { 
-    width: 6px; 
-    height: 6px; 
-    border-right: 1px solid #FF661A; 
-    border-top: 1px solid #FF661A; 
-    transform: rotate(45deg); 
-    margin-left: .35rem; 
-    margin-right: .45rem; 
-}
-
-.crumb-component ul li:last-child a { font-weight: 700; }
 
 /*  */
 
@@ -1172,36 +1147,6 @@ div.list-view-btn button {
     min-width: 0; 
 }
 
-.rdo-label { 
-    display: flex; 
-    align-items: center;
-    font-weight: 400; 
-    border-bottom: 0; 
-}
-
-.rdo-label::before { 
-    content: ''; 
-    position: relative; 
-    display: inline-block; 
-    width: 15px; 
-    height: 15px; 
-    border-radius: 50%; 
-    border: 1px solid #FF661A; 
-    margin-right: .5rem; 
-}
-
-.rdo-label::after { 
-    content:''; 
-    position: absolute; 
-    top: 4px; 
-    left: 4px; 
-    display: none; 
-    background: #FF661A; 
-    width: 7px; 
-    height: 7px; 
-    border-radius: 50%;
-}
-
 .business-type input[type="radio"]:checked + label::after {
     display: inline-block; 
 }
@@ -1306,45 +1251,6 @@ div.list-view-btn button {
     font-size: .725rem; 
 }
 
-.chk-box input { 
-    display: none; 
-}
-
-.chk-box label { 
-    min-width: 0; 
-    display: flex;
-    align-items: center;
-    line-height: 1rem; 
-    font-weight: 400; 
-}
-
-.chk-box label::before { 
-    content:''; 
-    position: relative;
-    display: inline-block; 
-    min-width: 15px; 
-    width: 15px; 
-    height: 15px; 
-    border: 1px solid #aaa; 
-    border-radius: .25rem;
-    /* box-shadow: inset 0px 0px 2px rgba(0,0,0,0.35); */
-    margin-right: .5rem; 
-}
-
-.chk-box label::after { 
-    content: ''; 
-    display: none; 
-    width: 8px; 
-    height: 6px; 
-    border-left: 2px solid #FF661A; 
-    border-bottom: 2px solid #FF661A;
-    position: absolute;
-    top: 4px; 
-    left: 3px; 
-    transform: rotate(-45deg);
-}
-
-.chk-box input:checked + label::after { display: block; }
 
 .marker-btn.active { 
     background: #FF661A !important; 
